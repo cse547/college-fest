@@ -1140,3 +1140,139 @@ footer {
         flex-direction: column;
     }
 }
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Section Styling */
+.leadership-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: black;
+}
+
+.leadership-section h2 {
+    font-size: 38px;
+    font-weight: 600;
+    color: orange;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.leadership-section h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: orange;
+    margin: 8px auto;
+}
+
+/* Grid Layout */
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Individual Card Styling */
+.leader-card {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid orange;
+}
+
+/* Hover Effect on Card */
+.leader-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 165, 0, 0.4);
+}
+
+/* Image Styling */
+.leader-image img {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid orange;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.leader-card:hover .leader-image img {
+    transform: scale(1.1);
+    border-color: white;
+}
+
+/* Info Section */
+.leader-info {
+    margin-top: 15px;
+}
+
+.leader-info h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: orange;
+}
+
+.leader-info p {
+    font-size: 16px;
+    color: #d1d1d1;
+    font-weight: 300;
+}
+
+/* Glow Effect on Hover */
+.leader-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 165, 0, 0.15) 10%, transparent 50%);
+    transition: transform 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.leader-card:hover::before {
+    opacity: 1;
+    transform: rotate(30deg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .leader-card {
+        padding: 20px;
+    }
+
+    .leader-info h4 {
+        font-size: 20px;
+    }
+
+    .leader-info p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column; /* Stack logo and text vertically */
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+}
