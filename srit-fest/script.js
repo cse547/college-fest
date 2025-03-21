@@ -289,4 +289,3 @@ window.addEventListener('resize', () => {
 // Update countdown every second
 setInterval(updateCountdown, 1000);
 updateCountdown();
-
